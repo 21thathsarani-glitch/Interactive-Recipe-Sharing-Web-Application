@@ -1,41 +1,30 @@
-# Interactive Recipe Sharing Web Application
+# SavoryHub - PHP Integration (Phase 3)
 
-# SavoryHub Recipe Website
-SavoryHub is an interactive web application that allows users to explore and share homemade recipes. The website is designed to be simple, responsive, and easy to use for people who enjoy cooking.
+SavoryHub is a recipe management web application featuring user authentication, recipe submissions, and a contact form, fully integrated with a MySQL database.
 
-## Theme
-Digital Recipe Book / Online Recipe Sharing Platform.
+## Prerequisites
+- XAMPP or WAMP server installed.
+- PHP 7.4 or higher.
 
-## Purpose
-The purpose of this web application is to provide a platform where users can browse recipes and submit their own cooking ideas in an organized digital format.
+## Setup Instructions
 
-## Features
-- Responsive navigation menu
-- Recipe display with ingredients and preparation steps
-- Recipe submission form with validation
-- Contact form for user feedback
-- Responsive design using Bootstrap
+1. **Move Project Folder**: 
+   Ensure this entire `project2` folder is moved to the `htdocs` directory of your XAMPP installation (usually `C:\xampp\htdocs\project2\`) or WAMP's `www` directory.
 
-## Pages
-- Home
-- About Us
-- Recipe Details
-- Add Recipe
-- Contact Us
-- Login
-- Register
+2. **Start Services**:
+   Open XAMPP Control Panel and start **Apache** and **MySQL** services.
 
-## Usage
-- Open the website in a web browser.
-- Register a new account using the Registration page.
-- Login to the system using your username and password.
-- Browse recipes from the Recipes page.
-- Submit your own recipe using the Submit Recipe page.
-- Use the Contact page to send feedback or questions.
+3. **Import the Database**:
+   - Go to `http://localhost/phpmyadmin` in your web browser.
+   - You can either manually create a database named `savoryhub` OR simply go to the **Import** tab.
+   - Click "Choose File" and select `database.sql` located inside the root of this project folder.
+   - Click "Import". This will automatically create the `savoryhub` database along with the `users`, `messages`, and `recipes` tables.
 
-## Technologies Used
-- HTML
-- CSS
-- JavaScript
-- Bootstrap
+4. **Access the Website**:
+   - Open your browser and navigate to: `http://localhost/project2/index.php` .
+   - You can now Register, Login, Submit recipes, and use the Contact form!
 
+## Folder Structure Update
+- `includes/`: Contains `db.php` for database connections and `functions.php` for helper methods.
+- `auth/`: Contains logic for `login.php`, `register.php`, and `logout.php`.
+- The main files have been converted from `.html` to `.php` to securely handle sessions and database interactions.
