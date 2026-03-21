@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SavoryHub</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-dark text-white">
+
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="Images/logo.png" alt="SavoryHub Logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation" style="border-color: transparent;">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link scroll-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link scroll-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link scroll-link" href="recipes.html">Recipe Details</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scroll-link" href="submit.html">Add Recipe</a></li>
+                    <li class="nav-item"><a class="nav-link scroll-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item guest-only"><a class="nav-link scroll-link active" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item guest-only"><a class="nav-link scroll-link" href="register.html">Register</a>
+                    </li>
+                    <li class="nav-item user-only" style="display: none;"><a class="nav-link scroll-link" href="#"
+                            id="logoutBtn">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Login Content Area -->
+    <section class="container my-5 flex-grow-1 d-flex align-items-center justify-content-center">
+        <div class="card bg-secondary text-white p-5 shadow-lg rounded-4 border-0"
+            style="max-width: 450px; width: 100%;">
+            <h2 class="text-center mb-4 text-warning fw-bold">Login to SavoryHub</h2>
+            <form id="loginForm" novalidate>
+                <div class="mb-3">
+                    <label for="loginName" class="form-label">User Name</label>
+                    <input type="text" class="form-control" id="loginName" placeholder="Enter your user name" required>
+                    <div class="invalid-feedback text-warning">Please enter your user name.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="loginEmail" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email" required>
+                    <div class="invalid-feedback text-warning">Please enter a valid email address.</div>
+                </div>
+                <div class="mb-4">
+                    <label for="loginPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password"
+                        required>
+                    <div class="invalid-feedback text-warning">Please enter your password.</div>
+                </div>
+                <button type="submit" class="btn btn-warning w-100 mb-4 text-dark fw-bold fs-5 py-2"
+                    style="background:#f39c12; border:none;">Login</button>
+                <div class="text-center">
+                    <p class="mb-0 text-light opacity-75">Don't have an account? <a href="register.html"
+                            class="text-warning text-decoration-none fw-bold">Register here</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="custom-footer text-white py-4 mt-auto">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div class="mb-3 mb-md-0 text-center text-md-start">
+                &copy; 2026 SavoryHub. All right reserved.<br>
+                Designed and Developed by SavoryHub.
+            </div>
+            <div class="d-flex gap-3">
+                <a href="#" class="text-white text-decoration-none fs-4"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white text-decoration-none fs-4"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="text-white text-decoration-none fs-4"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white text-decoration-none fs-4"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Recipe</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="Images/logo.png" alt="SavoryHub Logo" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+        style="border-color: transparent;">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link scroll-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link scroll-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link scroll-link" href="recipes.html">Recipe Details</a></li>
+          <li class="nav-item"><a class="nav-link scroll-link" href="submit.html">Add Recipe</a></li>
+          <li class="nav-item"><a class="nav-link scroll-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-item guest-only"><a class="nav-link scroll-link" href="login.html">Login</a></li>
+          <li class="nav-item guest-only"><a class="nav-link scroll-link" href="register.html">Register</a></li>
+          <li class="nav-item user-only" style="display: none;"><a class="nav-link scroll-link" href="#"
+              id="logoutBtn">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container my-5 text-center"
+    style="background: url('Images/bg.jpg') center/cover no-repeat; background-attachment: fixed; position: relative; padding: 4rem 2rem; border-radius: 10px;">
+    <div
+      style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(44, 48, 52, 0.85); border-radius: 15px;">
+    </div>
+    <div style="position: relative; z-index: 2;">
+      <h2 class="mb-4" style="color: #f39c12; font-weight: bold;">Submit Your Recipe</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form id="submitRecipeForm" novalidate>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="recipeName" placeholder="Recipe Name" required>
+              <div class="invalid-feedback">Please provide a recipe name.</div>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" id="recipeDesc" placeholder="Recipe Description" rows="3"
+                required></textarea>
+              <div class="invalid-feedback">Please provide a description.</div>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" id="recipeIngredients" placeholder="Ingredients" rows="3"
+                required></textarea>
+              <div class="invalid-feedback">Please list the ingredients.</div>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" id="recipeSteps" placeholder="How to Cook" rows="4" required></textarea>
+              <div class="invalid-feedback">Please provide cooking steps.</div>
+            </div>
+            <div class="mb-3 text-start">
+              <label for="recipeImage" class="form-label">Recipe Image</label>
+              <input class="form-control" type="file" id="recipeImage" accept="image/*" required>
+              <div class="invalid-feedback">Please upload an image for your recipe.</div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100" style="background:#f39c12; border:none;">Submit
+              Recipe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="custom-footer text-white py-4 mt-auto">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div class="mb-3 mb-md-0 text-center text-md-start">
+        &copy; 2026 SavoryHub. All right reserved.<br>
+        Designed and Developed by SavoryHub.
+      </div>
+      <div class="d-flex gap-3">
+        <a href="#" class="text-white text-decoration-none fs-4"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white text-decoration-none fs-4"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="text-white text-decoration-none fs-4"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white text-decoration-none fs-4"><i class="bi bi-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
